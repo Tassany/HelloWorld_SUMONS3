@@ -59,7 +59,6 @@ git clone https://github.com/vodafone-chair/ns3-sumo-coupling.git
 | `routes.rou.xml` | Vehicles and their routes in the simulation |
 | `scenario.cfg` | SUMO configuration links the two files above and sets simulation time |
 
----
 
 ---
 
@@ -82,7 +81,7 @@ git clone https://github.com/vodafone-chair/ns3-sumo-coupling.git
 | [Additional Tools](https://sumo.dlr.de/docs/Tools/index.html) | Various utility scripts |
 
 ## Generating a road network map
-Using the `netgenerate` tool, is possible to create automatically a maps. For example, to create a 5x5 grid map with 200m long edges:
+Using the `netgenerate` tool, is possible to create automatically a map. For example, to create a 5x5 grid map with 200m long edges:
 ```bash
 netgenerate --grid \
             --grid.number=5 \
@@ -110,6 +109,7 @@ See [Definition of Vehicles, Vehicle Types, and Routes](https://sumo.dlr.de/docs
 
 ## Configuring the Simulation
 The `scenario.cfg` file links the network and route files and sets simulation parameters:
+
 ```xml<configuration>
     <input>
         <net-file value="map.net.xml"/>
@@ -122,6 +122,11 @@ The `scenario.cfg` file links the network and route files and sets simulation pa
     </time>
 </configuration>
 ``` 
+
+## Running the SUMO Simulation
+      python3 generate.py
+
+## SUMO output
 ---
 ## References
 

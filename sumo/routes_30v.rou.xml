@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-03-05 00:33:23.402179 by Eclipse SUMO randomTrips.py v1.26.0
+<configuration>
+    <net-file value="/home/tassany/Documents/Codes/HelloWorld_SUMONS3/sumo/grid.net.xml"/>
+    <output-trip-file value="/home/tassany/Documents/Codes/HelloWorld_SUMONS3/sumo/trips_30v.trips.xml"/>
+    <route-file value="/home/tassany/Documents/Codes/HelloWorld_SUMONS3/sumo/routes_30v.rou.xml"/>
+    <trip-attributes value="type=&quot;car&quot;"/>
+    <fringe-factor value="1"/>
+    <allow-roundabouts value="True"/>
+    <min-distance value="500.0"/>
+    <end value="100.0"/>
+    <period value="3.33"/>
+</configuration>
+-->
+
+<!-- generated on 2026-03-05T00:33:23.390179+01:00 by Eclipse SUMO duarouter 1.26.0
+<duarouterConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/duarouterConfiguration.xsd">
+
+    <input>
+        <net-file value="/home/tassany/Documents/Codes/HelloWorld_SUMONS3/sumo/grid.net.xml"/>
+        <route-files value="/home/tassany/Documents/Codes/HelloWorld_SUMONS3/sumo/trips_30v.trips.xml"/>
+    </input>
+
+    <output>
+        <output-file value="/home/tassany/Documents/Codes/HelloWorld_SUMONS3/sumo/routes_30v.rou.xml"/>
+        <alternatives-output value="NUL"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="100.0"/>
+    </time>
+
+    <report>
+        <no-warnings value="true"/>
+        <ignore-errors value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+</duarouterConfiguration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vehicle id="0" type="car" depart="0.00">
+        <route edges="G9G8 G8G7 G7G6 G6G5 G5G4 G4G3 G3F3 F3E3 E3D3 D3C3 C3B3 B3A3 A3A4"/>
+    </vehicle>
+    <vehicle id="1" type="car" depart="3.33">
+        <route edges="D1C1 C1C2 C2C3 C3C4 C4C5 C5D5"/>
+    </vehicle>
+    <vehicle id="2" type="car" depart="6.66">
+        <route edges="H9I9 I9I8 I8I7 I7I6 I6I5 I5I4 I4I3 I3H3 H3G3"/>
+    </vehicle>
+    <vehicle id="3" type="car" depart="9.99">
+        <route edges="J5K5 K5K4 K4K3 K3K2 K2J2 J2I2 I2H2 H2G2 G2F2 F2E2 E2D2 D2C2 C2B2 B2B1 B1B0"/>
+    </vehicle>
+    <vehicle id="4" type="car" depart="13.32">
+        <route edges="E6E7 E7D7 D7C7 C7B7 B7A7 A7A6 A6A5 A5A4 A4A3"/>
+    </vehicle>
+    <vehicle id="5" type="car" depart="16.65">
+        <route edges="C5C4 C4D4 D4D5 D5E5 E5F5 F5F4"/>
+    </vehicle>
+    <vehicle id="6" type="car" depart="19.98">
+        <route edges="H0I0 I0I1 I1I2 I2I3 I3I4 I4I5 I5I6 I6I7 I7I8 I8I9 I9H9 H9G9 G9F9 F9F8"/>
+    </vehicle>
+    <vehicle id="7" type="car" depart="23.31">
+        <route edges="C5C4 C4D4 D4E4 E4F4 F4G4 G4F4"/>
+    </vehicle>
+    <vehicle id="8" type="car" depart="26.64">
+        <route edges="I7I6 I6H6 H6H7 H7H8 H8H9 H9H10 H10G10 G10F10 F10E10 E10D10 D10C10 C10B10 B10A10 A10A9"/>
+    </vehicle>
+    <vehicle id="9" type="car" depart="29.97">
+        <route edges="K3K4 K4K5 K5K6 K6J6 J6I6 I6H6 H6G6 G6F6 F6E6 E6D6 D6D7 D7E7"/>
+    </vehicle>
+    <vehicle id="10" type="car" depart="33.30">
+        <route edges="J10K10 K10K9 K9K8 K8K7 K7K6 K6K5 K5J5 J5I5 I5H5 H5G5 G5G6"/>
+    </vehicle>
+    <vehicle id="11" type="car" depart="36.63">
+        <route edges="I7H7 H7H8 H8H9 H9G9"/>
+    </vehicle>
+    <vehicle id="12" type="car" depart="39.96">
+        <route edges="F8F9 F9G9 G9H9 H9I9 I9J9 J9K9 K9K8 K8K7 K7K6 K6J6"/>
+    </vehicle>
+    <vehicle id="13" type="car" depart="43.29">
+        <route edges="I9I10 I10H10 H10G10 G10G9 G9G8 G8G7 G7G6"/>
+    </vehicle>
+    <vehicle id="14" type="car" depart="46.62">
+        <route edges="H6H5 H5G5 G5F5 F5E5 E5D5 D5C5 C5B5 B5A5 A5A6 A6A7"/>
+    </vehicle>
+    <vehicle id="15" type="car" depart="49.95">
+        <route edges="C6C5 C5C4 C4C3 C3C2 C2D2 D2D3"/>
+    </vehicle>
+    <vehicle id="16" type="car" depart="53.28">
+        <route edges="B10B9 B9B8 B8B7 B7B6 B6C6 C6D6"/>
+    </vehicle>
+    <vehicle id="17" type="car" depart="56.61">
+        <route edges="B2C2 C2D2 D2D1 D1D0"/>
+    </vehicle>
+    <vehicle id="18" type="car" depart="59.94">
+        <route edges="G9F9 F9F10 F10E10 E10D10"/>
+    </vehicle>
+    <vehicle id="19" type="car" depart="63.27">
+        <route edges="E10F10 F10F9 F9F8 F8F7 F7F6 F6F5 F5E5 E5D5 D5C5 C5C4 C4C3"/>
+    </vehicle>
+    <vehicle id="20" type="car" depart="66.60">
+        <route edges="D0E0 E0F0 F0G0 G0H0 H0I0 I0J0 J0J1 J1J2 J2J3 J3J4 J4J5 J5J6 J6J7 J7J8 J8J9 J9J10 J10K10 K10K9"/>
+    </vehicle>
+    <vehicle id="21" type="car" depart="69.93">
+        <route edges="H0I0 I0I1 I1I2 I2I3 I3I4 I4I5 I5I6 I6H6 H6G6 G6G5"/>
+    </vehicle>
+    <vehicle id="22" type="car" depart="73.26">
+        <route edges="C0D0 D0E0 E0F0 F0G0 G0H0 H0H1 H1H2 H2H3 H3H4 H4H5 H5H6 H6H7 H7H8 H8I8"/>
+    </vehicle>
+    <vehicle id="23" type="car" depart="76.59">
+        <route edges="B9B8 B8B7 B7B6 B6B5 B5B4 B4B3 B3B2 B2B1 B1C1 C1D1 D1E1 E1F1"/>
+    </vehicle>
+    <vehicle id="24" type="car" depart="79.92">
+        <route edges="K8K7 K7J7 J7I7 I7I8 I8I9 I9H9 H9G9 G9G8"/>
+    </vehicle>
+    <vehicle id="25" type="car" depart="83.25">
+        <route edges="G10G9 G9G8 G8G7 G7G6 G6H6 H6H5 H5H4 H4G4"/>
+    </vehicle>
+    <vehicle id="26" type="car" depart="86.58">
+        <route edges="J10I10 I10I9 I9I8 I8I7 I7I6 I6I5 I5I4 I4I3 I3I4"/>
+    </vehicle>
+    <vehicle id="27" type="car" depart="89.91">
+        <route edges="D5D4 D4D3 D3D2 D2D1 D1D0 D0E0"/>
+    </vehicle>
+    <vehicle id="28" type="car" depart="93.24">
+        <route edges="C4C3 C3C2 C2C1 C1D1 D1E1 E1F1 F1G1 G1H1 H1I1 I1J1 J1K1 K1K0"/>
+    </vehicle>
+    <vehicle id="29" type="car" depart="96.57">
+        <route edges="J4I4 I4H4 H4H5 H5G5 G5F5 F5E5 E5D5 D5D4"/>
+    </vehicle>
+    <vehicle id="30" type="car" depart="99.90">
+        <route edges="H10I10 I10I9 I9I8 I8I7 I7I6 I6I5 I5I4 I4I3 I3H3 H3G3 G3F3 F3E3 E3F3"/>
+    </vehicle>
+</routes>

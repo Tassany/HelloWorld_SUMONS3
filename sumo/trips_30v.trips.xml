@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-03-05 00:33:23.305443 by Eclipse SUMO randomTrips.py v1.26.0
+<configuration>
+    <net-file value="/home/tassany/Documents/Codes/HelloWorld_SUMONS3/sumo/grid.net.xml"/>
+    <output-trip-file value="/home/tassany/Documents/Codes/HelloWorld_SUMONS3/sumo/trips_30v.trips.xml"/>
+    <route-file value="/home/tassany/Documents/Codes/HelloWorld_SUMONS3/sumo/routes_30v.rou.xml"/>
+    <trip-attributes value="type=&quot;car&quot;"/>
+    <fringe-factor value="1"/>
+    <allow-roundabouts value="True"/>
+    <min-distance value="500.0"/>
+    <end value="100.0"/>
+    <period value="3.33"/>
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <trip id="0" depart="0.00" from="G9G8" to="A3A4" type="car"/>
+    <trip id="1" depart="3.33" from="D1C1" to="C5D5" type="car"/>
+    <trip id="2" depart="6.66" from="H9I9" to="H3G3" type="car"/>
+    <trip id="3" depart="9.99" from="J5K5" to="B1B0" type="car"/>
+    <trip id="4" depart="13.32" from="E6E7" to="A4A3" type="car"/>
+    <trip id="5" depart="16.65" from="C5C4" to="F5F4" type="car"/>
+    <trip id="6" depart="19.98" from="H0I0" to="F9F8" type="car"/>
+    <trip id="7" depart="23.31" from="C5C4" to="G4F4" type="car"/>
+    <trip id="8" depart="26.64" from="I7I6" to="A10A9" type="car"/>
+    <trip id="9" depart="29.97" from="K3K4" to="D7E7" type="car"/>
+    <trip id="10" depart="33.30" from="J10K10" to="G5G6" type="car"/>
+    <trip id="11" depart="36.63" from="I7H7" to="H9G9" type="car"/>
+    <trip id="12" depart="39.96" from="F8F9" to="K6J6" type="car"/>
+    <trip id="13" depart="43.29" from="I9I10" to="G7G6" type="car"/>
+    <trip id="14" depart="46.62" from="H6H5" to="A6A7" type="car"/>
+    <trip id="15" depart="49.95" from="C6C5" to="D2D3" type="car"/>
+    <trip id="16" depart="53.28" from="B10B9" to="C6D6" type="car"/>
+    <trip id="17" depart="56.61" from="B2C2" to="D1D0" type="car"/>
+    <trip id="18" depart="59.94" from="G9F9" to="E10D10" type="car"/>
+    <trip id="19" depart="63.27" from="E10F10" to="C4C3" type="car"/>
+    <trip id="20" depart="66.60" from="D0E0" to="K10K9" type="car"/>
+    <trip id="21" depart="69.93" from="H0I0" to="G6G5" type="car"/>
+    <trip id="22" depart="73.26" from="C0D0" to="H8I8" type="car"/>
+    <trip id="23" depart="76.59" from="B9B8" to="E1F1" type="car"/>
+    <trip id="24" depart="79.92" from="K8K7" to="G9G8" type="car"/>
+    <trip id="25" depart="83.25" from="G10G9" to="H4G4" type="car"/>
+    <trip id="26" depart="86.58" from="J10I10" to="I3I4" type="car"/>
+    <trip id="27" depart="89.91" from="D5D4" to="D0E0" type="car"/>
+    <trip id="28" depart="93.24" from="C4C3" to="K1K0" type="car"/>
+    <trip id="29" depart="96.57" from="J4I4" to="D5D4" type="car"/>
+    <trip id="30" depart="99.90" from="H10I10" to="E3F3" type="car"/>
+</routes>
