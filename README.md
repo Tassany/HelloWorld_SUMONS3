@@ -57,32 +57,9 @@ git clone https://github.com/vodafone-chair/ns3-sumo-coupling.git
 |------|-------------|
 | `map.net.xml` | Road network map |
 | `routes.rou.xml` | Vehicles and their routes in the simulation |
-| `scenario.cfg` | SUMO configuration — links the two files above and sets simulation time |
+| `scenario.cfg` | SUMO configuration links the two files above and sets simulation time |
 
 ---
-
-## Generating a Grid Network
-
-```bash
-netgenerate --grid \
-            --grid.number=5 \
-            --grid.length=200 \
-            --output-file=sumo/map.net.xml
-```
-
-## Defining Routes
-
-Vehicles require a type (length, acceleration, max speed) and a route. Example `hello.rou.xml`:
-
-```xml
-<routes>
-    <vType accel="1.0" decel="5.0" id="Car" length="2.0" maxSpeed="100.0" sigma="0.0" />
-    <route id="route0" edges="1to2 out"/>
-    <vehicle depart="1" id="veh0" route="route0" type="Car" />
-</routes>
-```
-
-See [Definition of Vehicles, Vehicle Types, and Routes](https://sumo.dlr.de/docs/Definition_of_Vehicles%2C_Vehicle_Types%2C_and_Routes.html) for more details.
 
 ---
 
@@ -104,8 +81,48 @@ See [Definition of Vehicles, Vehicle Types, and Routes](https://sumo.dlr.de/docs
 | [activitygen](https://sumo.dlr.de/docs/activitygen.html) | Demand generation from population model |
 | [Additional Tools](https://sumo.dlr.de/docs/Tools/index.html) | Various utility scripts |
 
----
+## Generating a road network map
+Using the `netgenerate` tool, is possible to create automatically a maps. For example, to create a 5x5 grid map with 200m long edges:
+```bash
+netgenerate --grid \
+            --grid.number=5 \
+            --grid.length=200 \
+            --output-file=sumo/map.net.xml
+```
 
+
+## Defining Routes
+Now that we have a map, we can define vehicle routes. Vehicles require a type (length, acceleration, max speed) and a route. Furthermore it needs a so called sigma parameter which introduces some random behavior owing to the car following model used.Example `veic.rou.xml`:
+
+```xml
+<routes>
+    <vType id="car" maxSpeed="30" accel="2" decel="2" sigma="0.0" />
+    
+    <flow id="flow_0" type="car" 
+          from="edge_0" to="edge_10" 
+          begin="0" end="100" 
+          number="20"/>
+</routes>
+```
+
+See [Definition of Vehicles, Vehicle Types, and Routes](https://sumo.dlr.de/docs/Definition_of_Vehicles%2C_Vehicle_Types%2C_and_Routes.html) for more details.
+
+
+## Configuring the Simulation
+The `scenario.cfg` file links the network and route files and sets simulation parameters:
+```xml<configuration>
+    <input>
+        <net-file value="map.net.xml"/>
+        <route-files value="veic.rou.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="1000"/>
+        <step-length value="0.1"/>
+    </time>
+</configuration>
+``` 
+---
 ## References
 
 - [SUMO Documentation](https://sumo.dlr.de/docs/Tools/index.html)
