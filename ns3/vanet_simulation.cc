@@ -5,3 +5,6 @@
 #include "ns3/wave-module.h"
 
 
+int main(int argc, char* argv[]){
+    
+}
