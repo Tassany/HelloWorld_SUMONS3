@@ -76,14 +76,19 @@ def generate_routes(output_dir: str, net_file: str, num_vehicles: int):
         return routes_file
     
 
-    # Isso está correto? 
-    period = SIM_TIME / num_vehicles 
+    # The randomTrips.py script generates trips at regular intervals. 
+    # To insert a total of `num_vehicles` vehicles, we can calculate the insertion end time based on a fixed period. 
+    # For example, if we choose a period of 0.1 seconds, the insertion end time would be `num_vehicles * period`.
+    # IN 3.0s we would have 30 vehicles, which is a reasonable rate for our scenario.
+    period = 0.1
+    insertion_end = num_vehicles * period
 
     cmd = [
         "python3", rtrips_py,
         "-n", net_file,
-        "-e", str(SIM_TIME),
-        "-p", f"{period:.2f}",
+        "-b", "0",
+        "-e", f"{insertion_end:.1f}",
+        "-p", f"{period:.1f}",
         "--trip-attributes", 'type="car"',  # referencia o vType definido em vtypes.add.xml
         "--fringe-factor", "1",          # viagens internas ao grid
         "--min-distance", "500",         # distância mínima de viagem
