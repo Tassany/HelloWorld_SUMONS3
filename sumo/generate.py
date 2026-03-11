@@ -163,7 +163,7 @@ def convert_to_ns3(output_dir: str, fcd_file: str, num_vehicles: int):
 def main():
     parser = argparse.ArgumentParser(description="Generate SUMO scenarios and convert to NS-3 format.")
     parser.add_argument("--output-dir", default=SCRIPT_DIR, help="Directory to save generated files")
-    parser.add_argument("--vehicles", type=int, default=30, help="Number of vehicles in the scenario")
+    parser.add_argument("--vehicles", type=int, default=100, help="Number of vehicles in the scenario")
     args = parser.parse_args()
 
     os.makedirs(args.output_dir, exist_ok=True)

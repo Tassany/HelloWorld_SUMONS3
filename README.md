@@ -127,6 +127,11 @@ The `scenario.cfg` file links the network and route files and sets simulation pa
       python3 generate.py
 
 ## SUMO output
+
+ SUMO will generate the output files. The mobility file `mobility_30v.tcl` will be used by ns-3 to set the positions of the vehicles.
+ 
+## Runnning the ns-3 Simulation
+    ./ns3 run scratch/vanet_simulation
 ---
 ## References
 
